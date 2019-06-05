@@ -1,0 +1,102 @@
+.seeker-title {
+    position: relative;
+    display: inline;
+    float: left;
+    color: #882222;
+    font-style: italic;
+    width: 54%;
+    margin: 10px 0 10px 6%;
+}
+
+.filters {
+    position: relative;
+    display: inline;
+    float: right;
+    width: 40%;
+}
+
+.seeker-container {
+    width: 90%;
+    margin: 20px auto;
+    color: black;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.btn-filters {
+    margin-left: 5%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fa.fa-shopping-cart.pointer {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .seeker-title {
+        width: 94%;
+        margin: 10px 0 10px 6%;
+    }
+    .filters {
+        width: 48%;
+        margin-top: 29px;
+    }
+    .seeker-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+    table {
+        width: 50%;
+        margin: 100px 10% 0 0;
+    }
+    .btn-filters {
+        margin: 5% 0 0 0;
+    }
+    table,
+    th,
+    tbody,
+    tr,
+    td {
+        display: block;
+    }
+    tr:nth-child(2n) {
+        background: #666;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .seeker-title {
+        width: 94%;
+        margin: 10px 0 10px 6%;
+    }
+    .filters {
+        width: 48%;
+        margin-top: 29px;
+    }
+    .seeker-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .btn-filters {
+        margin: 5% 0 0 0;
+    }
+    table {
+        width: 50%;
+        margin: 100px 10% 0 0;
+    }
+    table,
+    th,
+    tbody,
+    tr,
+    td {
+        display: block;
+    }
+    tr:nth-child(2n) {
+        background: #666;
+    }
+}

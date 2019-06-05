@@ -1,0 +1,8 @@
+<carousel>
+    <slide *ngFor="let item of categories">
+        <img src="../../../assets/{{item.photo}}" alt="{{item.alt}}" style="display: block; width: 100%;" class="img-responsive center-block">
+        <div class="carousel-caption">
+            <h3><span [routerLink]="['/app/seeker']" class="main-link shake-slow">{{item.title}}</span></h3>
+        </div>
+    </slide>
+</carousel>

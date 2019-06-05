@@ -1,0 +1,25 @@
+<h1 class="seeker-title">Categories</h1>
+<div class="seeker-container">
+    <accordion [isAnimated]="true" [closeOthers]="true">
+        <accordion-group *ngFor="let item of categories" heading="{{item.name}}">
+            <!-- First sublevel -->
+            <div *ngIf="haveSublevel(item) ">
+                <ul *ngFor="let item2 of item.sublevels ">
+                    <li><span (click)="redirect(item2)">{{item2.name}}</span><br><input type="text" id="input{{item2.id}}" *ngIf=" !haveSublevel(item2)" placeholder="Search product..."></li>
+                    <!-- Second sublevel -->
+                    <div *ngIf="haveSublevel(item2) ">
+                        <ul *ngFor="let item3 of item2.sublevels">
+                            <li><span (click)="redirect(item3)">{{item3.name}}</span><br><input type="text" id="input{{item3.id}}" *ngIf="!haveSublevel(item3)" placeholder="Search product..."></li>
+                            <!-- Third sublevel -->
+                            <div *ngIf="haveSublevel(item)">
+                                <ul *ngFor="let item4 of item3.sublevels">
+                                    <li><span (click)="redirect(item4)">{{item4.name}}</span><br><input type="text" id="input{{item4.id}}" *ngIf="!haveSublevel(item4)" placeholder="Search product..."></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </accordion-group>
+    </accordion>
+</div>

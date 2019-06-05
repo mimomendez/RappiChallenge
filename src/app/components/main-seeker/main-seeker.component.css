@@ -1,0 +1,54 @@
+.seeker-title {
+    color: #882222;
+    font-style: italic;
+    width: 20%;
+    margin: 10px 0 10px 17%;
+}
+
+.seeker-container {
+    width: 70%;
+    margin: 20px auto;
+    color: black;
+    font-size: 15px;
+    padding: 15px;
+}
+
+li {
+    margin: 5px 40px;
+}
+
+span {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0 10%;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 5px;
+    margin: 1% 0 0 0;
+}
+
+.panel-heading {
+    cursor: pointer;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .seeker-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+    li {
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .seeker-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+    li {
+        margin: 5px 0;
+    }
+}

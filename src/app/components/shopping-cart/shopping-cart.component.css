@@ -1,0 +1,67 @@
+.seeker-container {
+    width: 90%;
+    margin: 20px auto;
+    color: black;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.stock-width {
+    width: 50%;
+}
+
+.button-modal {
+    width: 45%;
+    margin: 0 2.5%;
+}
+
+i.fa {
+    font-size: 20px;
+    padding: 8px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .seeker-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+    table {
+        width: 50%;
+        margin: 0 10% 0 0;
+    }
+    table,
+    th,
+    tbody,
+    tr,
+    td {
+        display: block;
+    }
+    tr:nth-child(2n) {
+        background: #666;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .seeker-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+    table {
+        width: 50%;
+        margin: 0 10% 0 0;
+    }
+    table,
+    th,
+    tbody,
+    tr,
+    td {
+        display: block;
+    }
+    tr:nth-child(2n) {
+        background: #666;
+    }
+}

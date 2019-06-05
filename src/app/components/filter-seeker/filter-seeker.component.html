@@ -1,0 +1,74 @@
+<h3 class="seeker-title">{{path}}</h3>
+<div class="filters">
+    <button type="button" class="btn btn-secondary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Show Filters
+</button>
+    <button type="button" class="btn btn-secondary btn-filters" [hidden]="!isCollapsed" (click)="applyFilters()">Apply Filters</button>
+    <div id="collapseBasic" [collapse]="!isCollapsed" [isAnimated]="true">
+        <hr>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" [(ngModel)]="checkAvailable">
+                </div>
+            </div>
+            <input type="text" class="form-control" value="Available" disabled>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">Price range (min - max)</span>
+            </div>
+            <input type="number" class="form-control" min="0" [(ngModel)]="minPrice">
+            <input type="number" class="form-control" min="0" [(ngModel)]="maxPrice">
+        </div>
+        <hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">Stock available (min - max)</span>
+            </div>
+            <input type="number" class="form-control" min="0" [(ngModel)]="minStock">
+            <input type="number" class="form-control" min="0" [(ngModel)]="maxStock">
+        </div>
+        <hr>
+    </div>
+</div>
+<div class="seeker-container">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" class="pointer" (click)="sortName()">Product Name
+                    <i class="fa fa-angle-up" [hidden]="!sortDescName || !sortDescNameActive"></i>
+                    <i class="fa fa-angle-down" [hidden]="sortDescName || !sortDescNameActive"></i></th>
+                <th scope="col" class="pointer" (click)="sortPrice()">Price
+                    <i class="fa fa-angle-up" [hidden]="!sortDescPrice || !sortDescPriceActive"></i>
+                    <i class="fa fa-angle-down" [hidden]="sortDescPrice || !sortDescPriceActive"></i></th>
+                <th scope="col" class="pointer" (click)="sortQuantity()">Quantity
+                    <i class="fa fa-angle-up" [hidden]="!sortDescQuantity || !sortDescQuantityActive"></i>
+                    <i class="fa fa-angle-down" [hidden]="sortDescQuantity || !sortDescQuantityActive"></i></th>
+                <th scope="col" class="pointer" (click)="sortAvailable()">Available
+                    <i class="fa fa-angle-up" [hidden]="!sortDescAvailable || !sortDescAvailableActive"></i>
+                    <i class="fa fa-angle-down" [hidden]="sortDescAvailable || !sortDescAvailableActive"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of showProducts; index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.available}}</td>
+                <td><i class="fa fa-shopping-cart pointer" [hidden]=!item.available (click)="openModal(template);addToCart(item)" tooltip="Add to cart!"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Modal -->
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Add to shopping cart</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">Your product now is Shopping Cart!!</div>
+</ng-template>
