@@ -2,6 +2,10 @@
 Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 Implemente algunos componentes de [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/)
 
+## Dependencias
+Para poder correr el proyecto es necesario tener instalado nodeJS (https://nodejs.org/es/download/). Ya instalado node, tambien contamos con el paquete npm. Para corroborar que esten instalados podemos probar ejecutando: 'node -v' y 'npm -v' (https://www.ecodeup.com/como-instalar-node-js-y-su-gestor-de-paquetes-npm-en-windows/).
+Luego debemos instalar angular-cli con este comando: 'npm install -g @angular/cli'. Por ultimo, debemos ubicarnos en la carpeta del proyecto en 'my-rappi' y ejecutar npm i (para instalar las dependencias del package.json).
+
 ## JSON-SERVER
 Para trabajar con las estructuras JSON provistas por RAPPI, he decidido usar la libreria de npm llamada 'JSON-server'. Emula un servidor y crea funciones del tipo API/rest para trabajar con dicha informacion.
 Es IMPORTANTISIMO aclarar que se creo un archivo db.json a 1er nivel del proyecto (al nivel de la carpeta node_modules para aclarar), el cual contiene la informacion de los archivos products.json y categories.json.
