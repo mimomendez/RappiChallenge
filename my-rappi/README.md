@@ -4,7 +4,7 @@ Implemente algunos componentes de [ngx-bootstrap](https://valor-software.com/ngx
 
 ## Dependencias
 Para poder correr el proyecto es necesario tener instalado nodeJS (https://nodejs.org/es/download/). Ya instalado node, tambien contamos con el paquete npm. Para corroborar que esten instalados podemos probar ejecutando: 'node -v' y 'npm -v' (https://www.ecodeup.com/como-instalar-node-js-y-su-gestor-de-paquetes-npm-en-windows/).
-Luego debemos instalar angular-cli con este comando: 'npm install -g @angular/cli'. Por ultimo, debemos ubicarnos en la carpeta del proyecto en 'my-rappi' y ejecutar npm i (para instalar las dependencias del package.json).
+Luego debemos instalar angular-cli con este comando: 'npm install -g @angular/cli'. Tambien tenemos que instalar el paquete de npm 'json-server' con este comando: 'npm install -g json-server'. Por ultimo, debemos ubicarnos en la carpeta del proyecto en 'my-rappi' y ejecutar npm i (para instalar las dependencias del package.json).
 
 ## JSON-SERVER
 Para trabajar con las estructuras JSON provistas por RAPPI, he decidido usar la libreria de npm llamada 'JSON-server'. Emula un servidor y crea funciones del tipo API/rest para trabajar con dicha informacion.
@@ -20,7 +20,7 @@ He creado un nuevo JSON categories-new, con el correspondiente aviso a mi recrui
 ## Servidor del proyecto
 Pasos para levantar el server del proyecto:
 1- Abrir una terminal o consola a la altura 'my-rappi'
-2- Ejecutar: ng-serve --open
+2- Ejecutar: ng serve --open
 3- Al agregar el comando '--open' se abrira automaticamente una nueva pestaña en su navegador predefinido como principal, con la url (http://localhost:4200/). Ahi ya se podra observar la pagina principal del proyecto.
 
 ## Aclaraciones del proyecto
